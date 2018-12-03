@@ -74,7 +74,7 @@ void setup(void)
     TCCR1B |= _BV(CS02);
       //overflow interrupt enable
     TIMSK1 |= _BV(TOIE0);
-    TCNT1 = 0xBDB;
+    TCNT1 = 0xBDC;
 
 
       //external pin-change interrupt
@@ -138,7 +138,7 @@ ISR(TIMER1_OVF_vect)
     PORTC = ones;                         //output ones on port C
     PORTB = tens;                         //output ones on port B
     PORTB |= _BV(PB4)| _BV(PB5);          //reset pull-up on inputs on PB4 and PB5
-    TCNT1 = 0xBDB;
+    TCNT1 = 0xBDC;
 }
 
 ISR(PCINT4_vect)
